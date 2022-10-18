@@ -2,7 +2,7 @@ import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
 import { Container, Form, Avatar } from './styles';
 import { FiArrowLeft, FiCamera, FiUser, FiMail, FiLock } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react'; 
 
 import { useAuth } from '../../hooks/auth';
@@ -12,6 +12,8 @@ import avatarPlaceholder from '../../assets/avatar_placeholder.svg';
 
 export function Profile() {
   const { user, updateProfile, loading } = useAuth();
+
+  const navigate = useNavigate()
 
   const [name, setName] = useState(user.name);
   const [email, setEmail] = useState(user.email);
@@ -31,6 +33,7 @@ export function Profile() {
     }
     const userUpdated = Object.assign(user, updated);
     await updateProfile({ user: userUpdated, avatarFile });
+
     navigate("/")
   }
 
@@ -97,7 +100,7 @@ export function Profile() {
           onChange={e => setPasswordNew(e.target.value)}
         />
 
-        <Button title={"Salvar"} onClick={handleUpdate}/>
+        <Button title="Salvar" onClick={handleUpdate} />
       </Form>
     </Container>
   )
