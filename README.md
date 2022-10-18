@@ -1,8 +1,9 @@
 # Best Movies 🎬 
+Deploy da aplicação: https://bestmoviesgb.netlify.app/
 
 ## 🚀 Começando...
 
-Best Movies 🎬 é uma aplicação para salvar, avaliar e gerenciar seus filmes favoritos construída com ReactJS e Vite.
+Best Movies 🎬 é uma aplicação para salvar, avaliar e gerenciar seus filmes favoritos construída com ReactJS e Vite. 
 
 ## 📦 Desenvolvimento
 
