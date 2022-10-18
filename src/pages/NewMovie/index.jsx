@@ -121,11 +121,7 @@ export function NewMovie() {
 
           <div className="buttons">
             <RemoveMovie type="button">Excluir filme</RemoveMovie>
-            <Button 
-              disabled={loading}
-              title={loading ? "Salvando..." :"Salvar Filme"}
-              onClick={handleNewMovieNote} 
-            />
+            <Button title={"Salvar Filme"} onClick={handleNewMovieNote}/>
           </div>
         </Form>
       </main>
