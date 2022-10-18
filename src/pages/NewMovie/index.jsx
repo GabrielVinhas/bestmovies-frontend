@@ -31,24 +31,11 @@ export function NewMovie() {
     setTags(prevState => prevState.filter(tag => tag !== deleted))
   }
 
-  async function handleNewMovieNote() {
-    if (!title) {
-      return alert("Digite o titulo do filme!")
-    }
+  async function handleNewMovie() {
 
-    if (!rating) {
-      return alert("Informe sua nota de avaliação sobre o filme!")
+    if(!title || !rating || !description || !tags){
+      return alert('Preencha todos os campos!')
     }
-
-    if (!description) {
-      return alert("Digite alguma observação sobre o filme!")
-    }
-
-    if (newTag) {
-      return alert("Você deixou uma tag no campo para adicionar, mas não clicou em adicionar. Clique para adicionar ou deixe o campo vazio");
-    }
-
-    setLoading(true);
 
     await api.post("/movie_notes", {
       title,
@@ -96,7 +83,7 @@ export function NewMovie() {
             onChange={e => setDescription(e.target.value)}
           />
 
-          <Section title="Marcadores">
+          <Section title="Gêneros">
             <div className="tags">
               {
                 tags.map((tag, index) => (
@@ -110,7 +97,7 @@ export function NewMovie() {
 
               <NewTag 
                 isNew
-                placeholder="Novo marcador"
+                placeholder="Gênero"
                 value={newTag}
                 onChange={e => setNewTag(e.target.value)}
                 onClick={handleAddTag}
@@ -121,7 +108,7 @@ export function NewMovie() {
 
           <div className="buttons">
             <RemoveMovie type="button">Excluir filme</RemoveMovie>
-            <Button title={"Salvar Filme"} onClick={handleNewMovieNote}/>
+            <Button title={"Salvar Filme"} onClick={handleNewMovie} />
           </div>
         </Form>
       </main>
