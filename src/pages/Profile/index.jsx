@@ -31,6 +31,7 @@ export function Profile() {
     }
     const userUpdated = Object.assign(user, updated);
     await updateProfile({ user: userUpdated, avatarFile });
+    navigate("/")
   }
 
   function handleChangeAvatar(event) {
@@ -96,7 +97,7 @@ export function Profile() {
           onChange={e => setPasswordNew(e.target.value)}
         />
 
-        <Button title='Salvar' onClick={handleUpdate}/>
+        <Button title={'Salvar'} onClick={handleUpdate}/>
       </Form>
     </Container>
   )
