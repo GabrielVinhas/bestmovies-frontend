@@ -96,7 +96,7 @@ export function Profile() {
           onChange={e => setPasswordNew(e.target.value)}
         />
 
-        <Button onClick={handleUpdate}/>
+        <Button title='Salvar' onClick={handleUpdate}/>
       </Form>
     </Container>
   )
