@@ -40,31 +40,30 @@ React | Styled-components
 
 ### 🔧 Instalação
 
-Clone Project and access folder and start the server it is necessary to have NodeJs
-installed and Visual Studio Code.
+Clone o projeto, acesse a pasta e inicie o servidor. 
+É necessário ter o NodeJS e o Visual Studio Code instalados
 
-### Programs needed to Getting started
+### Programas necessários para começar
 
 - [NodeJS](https://nodejs.org/en/)
 - [Visual Studio Code - Vscode](https://code.visualstudio.com/)
-- 
   
-Clone the project and access the folder
+Clone o projeto e acesse a pasta
 
 ```bash
-$ git clone https://github.com/felipe-gomes-vicente/rocket-movies-front-end.git
-$ cd rocket-movies-front-end
+$ git clone https://github.com/GabrielVinhas/bestmovies-frontend.git
+$ cd bestmovies-frontend
 ```
 
-### Install server and start up
+### Instale o servidor e inicie
 
 ```bash
-$ git clone https://github.com/felipe-gomes-vicente/rocket-movies-api.git
-$ cd rocket-movies-api
+$ git clone https://github.com/GabrielVinhas/bestmovies-api.git
+$ cd bestmovies-api
 $ npm install
 $ npm run dev
 ```
-PORT Server localhost:3333
+Server PORT localhost:3333
 
 ## ✒️ Autor
 
